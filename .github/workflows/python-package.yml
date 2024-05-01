@@ -22,7 +22,7 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run unit tests
-      run: pytest
+      run: python -m unittest discover
 
     - name: Build Python package
       run: python setup.py sdist bdist_wheel
