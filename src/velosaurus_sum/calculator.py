@@ -1,3 +1,2 @@
-def sum(a, b):
+def sum(a: float, b: float) -> float:
     return a + b
-
