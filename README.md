@@ -24,5 +24,13 @@ pip install --upgrade --force-reinstall -r requirements.txt
 ## Unit Testst
 
 ```bash
-python -m unittest discover
+python -m unittest discover -s tests -p 'test_*.py'
+```
+
+## Generate and test python package locally
+
+```bash
+python setup.py sdist bdist_wheel
+pip install dist/velosaurus_sum-1.0.4-py3-none-any.whl
+python .\src\test_package\test.py  
 ```
