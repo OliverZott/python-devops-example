@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="velosaurus_sum",
-    version="1.0.0",
+    version="1.0.1",
     description="Just a dummy project for some pipeline and package deployment testing",
     long_description="Just a dummy project for some pipeline and package deployment testing",
     author="Oliver Zott",
@@ -14,12 +14,10 @@ setup(
         # Add any dependencies your project requires
     ],
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: Beta",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
     ],
 )
