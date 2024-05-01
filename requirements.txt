@@ -1,2 +1,3 @@
 ruff # formatter, linter
 mypy # Type annoataion linter
+setuptools # Package Python projects
