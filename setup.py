@@ -2,12 +2,13 @@ from setuptools import find_packages
 from setuptools import setup
 
 setup(
-    name="your_project_name",
+    name="Velosaurus Dummy Project",
     version="1.0.0",
-    description="A short description of your project",
-    author="Your Name",
-    author_email="your_email@example.com",
-    url="https://github.com/your_username/your_project",
+    description="Just a dummy project for some pipeline and package deployment testing",
+    long_description="Just a dummy project for some pipeline and package deployment testing",
+    author="Oliver Zott",
+    author_email="zott_oliver@web.de",
+    url="https://github.com/OliverZott/python-devops-example",
     packages=find_packages(),
     install_requires=[
         # Add any dependencies your project requires

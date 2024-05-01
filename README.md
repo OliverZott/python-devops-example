@@ -1,4 +1,4 @@
-# DUmmy Python DevOps Project
+# Dummy Python DevOps Project
 
 ## Prerequisites
 
