@@ -2,7 +2,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 setup(
-    name="velosaurus-sum",
+    name="velosaurus_sum",
     version="1.0.0",
     description="Just a dummy project for some pipeline and package deployment testing",
     long_description="Just a dummy project for some pipeline and package deployment testing",
