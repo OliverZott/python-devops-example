@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="velosaurus_sum",
-    version="1.0.1",
+    version="1.0.2",
     description="Just a dummy project for some pipeline and package deployment testing",
     long_description="Just a dummy project for some pipeline and package deployment testing",
     author="Oliver Zott",
