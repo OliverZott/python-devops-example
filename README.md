@@ -20,3 +20,9 @@ pip list
 pip freeze > pip_list.txt   
 pip install --upgrade --force-reinstall -r requirements.txt
 ```
+
+## Unit Testst
+
+```bash
+python -m unittest discover
+```

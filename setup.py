@@ -9,7 +9,7 @@ setup(
     author="Oliver Zott",
     author_email="zott_oliver@web.de",
     url="https://github.com/OliverZott/python-devops-example",
-    packages=find_packages(),
+    packages=find_packages(where="src"),
     install_requires=[
         # Add any dependencies your project requires
     ],
