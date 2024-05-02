@@ -6,7 +6,7 @@ with open("PYPI_README.md") as f:
 
 setup(
     name="velosaurus_sum",
-    version="1.0.6",
+    version="1.0.7",
     description="Just a dummy project for some pipeline and package deployment testing",
     long_description=long_description,
     long_description_content_type="text/markdown",
