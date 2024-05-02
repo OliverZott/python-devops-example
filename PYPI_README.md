@@ -1,11 +1,13 @@
 # Dummy package
 
-Just a dummy package with dummy sum funciton :)
+Most incredible package ever.
 
 ## Usage
 
 ```python
-from velosaurus_sum import sum
+from velosaurus_sum import add_floats
+from velosaurus_sum import subtract_floats
 
-print(sum(1, 2))
+print(add_floats(1, 2))
+print(subtract_floats(1, 2))
 ```
