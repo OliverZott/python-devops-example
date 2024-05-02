@@ -3,9 +3,6 @@ def add_floats(a: float, b: float) -> float:
 
 
 def subtract_floats(a: float, b: float) -> float:
-    res1 = a + b
-    res2 = ""
-    res3 = ""
     return a + b
 
 
