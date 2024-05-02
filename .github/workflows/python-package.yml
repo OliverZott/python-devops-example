@@ -33,6 +33,12 @@ jobs:
     - name: Run Ruff
       run: ruff check --output-format=github src
 
+    - name: Bump version and push tag
+      run: |
+        pip install --upgrade bump2version
+        bump2version patch --allow-dirty
+
+
     - name: Build Python package
       run: python setup.py sdist bdist_wheel
 
