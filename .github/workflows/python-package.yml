@@ -28,6 +28,15 @@ jobs:
     - name: Run unit tests
       run: python -m unittest discover -s tests -p 'test_*.py'
 
+    - name: Run Ruff and check for errors
+      run: |
+        ruff_output=$(ruff src)
+        echo "$ruff_output"
+        error_count=$(echo "$ruff_output" | grep -c "error")
+        if (( error_count > 0 )); then
+          exit 1
+        fi
+
     - name: Build Python package
       run: python setup.py sdist bdist_wheel
 
