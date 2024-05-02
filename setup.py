@@ -5,15 +5,14 @@ with open("PYPI_README.md") as f:
     long_description = f.read()
 
 setup(
-    name="velosaurus_sum",
+    name="velosaurus_calc",
     version="1.0.7",
-    description="Just a dummy project for some pipeline and package deployment testing",
+    description="Most awesome math package ever.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Oliver Zott",
     author_email="zott_oliver@web.de",
     url="https://github.com/OliverZott/python-devops-example",
-    # packages=find_packages(),
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[

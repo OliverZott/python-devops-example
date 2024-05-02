@@ -1,6 +1,6 @@
 import unittest
 
-from src.velosaurus_sum.calculator import add_floats
+from src.velosaurus_calc.calculator import add_floats
 
 
 class TestCalculator(unittest.TestCase):
