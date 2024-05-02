@@ -29,6 +29,7 @@ jobs:
       run: python -m unittest discover -s tests -p 'test_*.py'
 
     - name: Run Ruff and check for errors
+      shell: bash
       run: |
         ruff_output=$(ruff src)
         echo "$ruff_output"
