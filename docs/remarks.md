@@ -108,6 +108,20 @@ Process of packaging an application and its dependencies into a container.
 
 --------
 
+## Example - PyPI
+
+- Sign Issue to project and estimate
+- Create a branch
+- Fix using AI and also unittest
+  - Fix with adding unused variables to force ruff error in pipeline
+  - Adapt unittest (float instead int with assertAlmostEqual)
+  - increment version number
+- Push and create PR
+- make code review
+- merge and check new version in PyPI
+
+--------
+
 ## DevOps Principles
 
 1. **Collaboration**: DevOps encourages collaboration between development and operations teams to improve communication and efficiency.
