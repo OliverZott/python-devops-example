@@ -1,4 +1,12 @@
-# Dummy Python DevOps Project
+# Python DevOps Sample Project
+
+This repository was created for a Grad­u­ate Sem­i­nar at the [Department of Atmospheric and Cryospheric Sciences (ACINN)](https://www.uibk.ac.at/en/acinn/) in Innsbruck on May 8th 2024. It serves as a dummy [PyPI package](https://pypi.org/project/velosaurus-calc/) to demonstrate some modern DevOps practices.
+
+- Collaboration (Scrum)
+- AI supported development
+- Git / PR / Code Review
+- CI/CD (Pipelines / IaC)
+- UnitTests / Static Linter
 
 ## Prerequisites
 
@@ -7,18 +15,14 @@
 ```bash
 # Create/activate/deactivate venv
 python -m venv venv
-.\venv\Scripts\activate
-source venv/bin/activate
+.\venv\Scripts\activate  # Windows
+source venv/bin/activate  # Linux
 .\venv\Scripts\deactivate
 
 # Install packages with activated env and check
 python -m pip install --upgrade pip
 pip install --upgrade -r ./requirements.txt 
 pip list
-
-# Freeze and Upgrade current packages  
-pip freeze > pip_list.txt   
-pip install --upgrade --force-reinstall -r requirements.txt
 ```
 
 ## Unit Testst
@@ -32,7 +36,6 @@ python -m unittest discover -s tests -p 'test_*.py'
 ```bash
 python setup.py sdist bdist_wheel
 pip install dist/velosaurus_sum-1.0.4-py3-none-any.whl
-python .\src\test_package\test.py  
 ```
 
 ## Tools
@@ -43,11 +46,10 @@ python .\src\test_package\test.py
 - autoDocstring - Python Docstring Generator
 - Jupyter and Python plugins
 
-Further:
+todo:
 
-- pytest
-- coverage
-- pre-commit
+- pytest and coverage
+- pre-commit instead pipeline test/linter runs
 
 ### ruff and mypy
 
