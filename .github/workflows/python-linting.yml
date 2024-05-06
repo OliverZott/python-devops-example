@@ -5,6 +5,9 @@ on:
   push:
     branches-ignore:
       - 'main'
+    paths-ignore:
+      - 'README.md'
+      - 'docs/**'
 
 jobs:
   lint:
