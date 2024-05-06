@@ -3,12 +3,13 @@
 \usepackage[latin1]{inputenc}
 \usepackage[english]{babel}
 \usepackage{setspace}
+\usepackage{hyperref}
 
 
 \title{DevOps - Modern Software Development}
 \author{Oliver Zott}
 \date{2024-05-08}
-\href(http://blogs.vmware.com/management/files/2020/03/2020-03-02_14-18-57.png)
+
 
 \begin{document}
 \setstretch{1.5} % Set line spacing to 1.5 (adjust as needed)
@@ -16,6 +17,9 @@
 % --------------------------------------------------------------------------------------------------------------------------
 \begin{frame}
 	\titlepage
+	\vfill
+    \centering
+    \href{https://github.com/OliverZott/python-devops-example}{GitHub Repository}
 \end{frame}
 
 % --------------------------------------------------------------------------------------------------------------------------
@@ -23,7 +27,7 @@
  	\tableofcontents
 \end{frame}
 
-% --------------------------------------------------------------------------------------------------------------------------
+% =============================================================
 \section{Survey}
 % Quick survey to establish common ground
 
@@ -67,7 +71,8 @@
 	\end{itemize}
 \end{frame}
 
-% --------------------------------------------------------------------------------------------------------------------------
+
+% =============================================================
 \section{Introduction to DevOps}
 \begin{frame}{DevOps}
     \begin{center}
@@ -90,11 +95,38 @@
 
 	\begin{itemize}
 		\item Plan/Collaborate
-		\item Codeing
+		\item Coding
 		\item CI/CD
-		\item Opeate and Monitor (Containerization)
+		\item Operate and Monitor (Containerization)
 	\end{itemize}
 \end{frame}
 
+
+% =============================================================
+\section{Example - PyPI}
+\begin{frame}{Example - PyPI}
+	Sample python package with a bug that needs fixing (\href{https://github.com/OliverZott/python-devops-example}{\color{blue}GitHub}, \href{https://pypi.org/project/velosaurus-calc/}{\color{blue}PyPI}).
+
+	\begin{itemize}
+		\item Planning with estimation
+		\item Coding with AI support (including unit test)
+		\item Check pipelines
+	\end{itemize}
+\end{frame}
+
+
+% =============================================================
+\section{Example - Docker}
+\begin{frame}{Example - Docker Container}
+	Sample asp.net core web API project with Docker containerization and Docker Hub deployment (\href{https://github.com/OliverZott/velosaurus-backend}{\color{blue}GitHub}, \href{https://hub.docker.com/repository/docker/dasmuesli/velosaurus-backend}{\color{blue}Docker Hub}).
+	
+	
+
+	\begin{itemize}
+	 	\item Container vs. virtual machine
+		\item Docker file and docker compose
+		\item Build and deploy pipelines
+	\end{itemize}
+\end{frame}
 
 \end{document}
