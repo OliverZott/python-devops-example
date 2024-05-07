@@ -22,7 +22,6 @@ source venv/bin/activate  # Linux
 # Install packages with activated env and check
 python -m pip install --upgrade pip
 pip install --upgrade -r ./requirements.txt 
-pip list
 ```
 
 ## Unit Testst
@@ -44,7 +43,6 @@ pip install dist/velosaurus_sum-1.0.4-py3-none-any.whl
 - mypy (type annotation linter)
   - if **Extension** installed, add rule: Search for mypy in Settings and ad "Mypy-type-checker args": ``"python.linting.mypyArgs": [     "--ignore-missing-imports" ]``
 - autoDocstring - Python Docstring Generator
-- Jupyter and Python plugins
 
 todo:
 
@@ -56,8 +54,6 @@ todo:
 Tools can be applied manualle in console or automatically in pipeline on commit/PR. Configuration for manual/local usage is done in **settings.json**. Configuration for pipeline/build-tool usage is done via **pyproject.toml**.
 
 Use Ruff instead of flake8 (linter), black (formatter) and isort (import sorter) separately.
-
-- in root foler: `python .\run_ruff.py`
 
 - **ruff** (linter / formatter)
   - `ruff check .`   ...basic check (linter)

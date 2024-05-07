@@ -98,6 +98,7 @@ Process of packaging an application and its dependencies into a container.
 - **Kubernetes**: Container orchestration platform that automates the deployment, scaling, and management of containerized applications. Using Ingres and Kong for API Gateway.
 - **Ingress**: Kubernetes resource that manages external access to services within a cluster.
 - **Kong**: Open-source API Gateway and Microservices Management Layer, delivering high performance and reliability.
+- **auto-scaling** and **load balancing** are used to manage workloads, auto-scaling adjusts the number of running instances based on load, and load balancing distributes traffic to those instances.
 
 ### 8. Monitor
 
@@ -116,6 +117,7 @@ Process of packaging an application and its dependencies into a container.
   - Fix with adding unused variables to force ruff error in pipeline
   - Adapt unittest (float instead int with assertAlmostEqual)
   - increment version number
+  - pipeline fix ruff src AND tests
 - Push and create PR
 - make code review
 - merge and check new version in PyPI
