@@ -122,6 +122,18 @@ Process of packaging an application and its dependencies into a container.
 - make code review
 - merge and check new version in PyPI
 
+Pipeline organization:
+
+- separate jobs:
+  - run parallel/independantly unless dependency with `needs`
+  - different environmen (ubuntu / windows)
+  - Group related Jobs
+
+- separate workflows
+  - different triggers (push, pull_request, schedule)
+  - control separately (manually triggered)
+  - unrelated tasks (build, test, deploy)
+  
 --------
 
 ## DevOps Principles
