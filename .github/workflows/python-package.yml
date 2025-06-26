@@ -10,6 +10,7 @@ on:
       - 'docs/**'
 
 permissions:
+  contents: write
   id-token: write
 
 # todo: 
@@ -24,6 +25,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        persist-credentials: true
+        ref: main
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -53,7 +57,10 @@ jobs:
       run: |
         pip install --upgrade bump2version
         bump2version patch --allow-dirty
-
+        
+    - name: Push version bump to main
+      run: |
+        git push origin HEAD:main --tags
 
     # build package
     - name: Build Python package
