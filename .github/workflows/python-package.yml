@@ -12,6 +12,11 @@ on:
 permissions:
   id-token: write
 
+# todo: 
+# - remove test/lint (already in feature pipelines)
+# - 3jobs: bump/package/publish
+# - 
+# - 
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,11 +35,19 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    # lint and unit tests
     - name: Run unit tests
       run: python -m unittest discover -s tests -p 'test_*.py'
 
     - name: Run Ruff
       run: ruff check --output-format=github src
+
+
+    # version increment
+    - name: Set up Git user for bump2version commit
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"    
 
     - name: Bump version and push tag
       run: |
@@ -42,6 +55,7 @@ jobs:
         bump2version patch --allow-dirty
 
 
+    # build package
     - name: Build Python package
       run: python setup.py sdist bdist_wheel
 
