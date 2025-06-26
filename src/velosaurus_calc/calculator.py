@@ -1,5 +1,5 @@
 def add_floats(a: float, b: float) -> float:
-    res = a - b
+    res = a + b
     return res
 
 
