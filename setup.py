@@ -6,7 +6,7 @@ with open("PYPI_README.md") as f:
 
 setup(
     name="velosaurus_calc",
-    version="1.0.10",
+    version="1.0.11",
     description="Most awesome math package ever.",
     long_description=long_description,
     long_description_content_type="text/markdown",
