@@ -1,10 +1,11 @@
 def add_floats(a: float, b: float) -> float:
-    return a + b
+    res = a + b
+    return res
 
 
 def subtract_floats(a: float, b: float) -> float:
-    return a + b
+    return a - b
 
 
 if __name__ == "__main__":
-    print(sum(2, 4))
+    print(add_floats(2, 4))

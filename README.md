@@ -64,3 +64,52 @@ Use Ruff instead of flake8 (linter), black (formatter) and isort (import sorter)
 
 - **mypy** (static type annotations)
   - `mypy --exclude venv .`
+
+## Pipelines (Workflows)
+
+- The overall automation process, defined in a YAML file, that runs on certain triggers (like push, pull request, etc.).
+- e.g. `python-linting.yml` file defines a pipeline (workflow).
+
+### Hierarchy in Github
+
+**In GitHub Actions, there are no native "stages"** like in Azure DevOps or GitLab CI.  
+The highest hierarchy in a workflow is:
+
+- **Workflow** (the whole YAML file, sometimes called a pipeline)
+  - **Jobs** (can run in parallel or in sequence using `needs`)
+    - **Steps** (run sequentially within a job)
+
+If you want to mimic "stages," you use multiple jobs and control their order with the `needs:` keyword. But officially, **jobs** are the top-level execution units inside a workflow.
+
+### **Runner**
+
+- **Definition:** A server (virtual machine or container) that executes your workflow jobs.
+- **Example:** `runs-on: ubuntu-latest` tells GitHub to use an Ubuntu runner.
+
+---
+
+### **Job**
+
+- **Definition:**
+  - A set of steps that run sequentially on the same runner.
+  - Multiple jobs in one pipeline (workflow) can run in parallel (unless you specify dependencies between them).
+  - Each job can specify its own runner using the runs-on key.
+  - By default, jobs run on separate runners (virtual machines or containers), which allows them to run in parallel and in isolated environments.
+- **Example:** Your `lint` job runs all the steps (checkout, setup Python, install, test, lint).
+
+---
+
+### **Action**
+
+- **Definition:** A reusable unit of code that performs a specific task in a workflow step.
+- **Example:** `actions/checkout@v2` is an action that checks out your code.
+
+---
+
+| Term     | GitHub Actions Example         | Description                                   |
+|----------|-------------------------------|-----------------------------------------------|
+| Runner   | `runs-on: ubuntu-latest`      | Where jobs run                                |
+| Action   | `actions/checkout@v2`         | Reusable step/task                            |
+| Pipeline | `.github/workflows/*.yml`     | The whole workflow process                    |
+| Stage    | (Not native, use jobs)        | Logical phase (build/test/deploy)             |
+| Job      | `jobs: lint:`                 | Group of steps on one runner                  |
